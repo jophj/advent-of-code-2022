@@ -5,7 +5,7 @@ use std::fs::read;
 // C/Z = scissors/win/3
 
 fn main() {
-    let file_content = read("./src/d2/input.txt");
+    let file_content = read("./input.txt");
     let binding = file_content.unwrap();
     let file_txt = String::from_utf8_lossy(&binding);
 
@@ -41,7 +41,7 @@ fn main() {
 
         score += win_score + move_score;
         strat_score += strat_move_score + strat_win_score;
-        println!("{}", score);
-        println!("{}", strat_score);
     }
+    println!("{}", score);
+    println!("{}", strat_score);
 }
