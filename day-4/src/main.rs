@@ -4,8 +4,6 @@ use std::io::BufRead;
 
 fn generate_sections_vec(section_pattern: Option<&str>) -> Vec<i32> {
     let mut asd = section_pattern.unwrap().split('-');
-    // let start = asd.next().unwrap().parse::<i32>().unwrap();
-    // let end = asd.next().unwrap().parse::<i32>().unwrap();
     let start = asd.next().unwrap().parse::<i32>().unwrap();
     let end = asd.next().unwrap().parse::<i32>().unwrap();
     let mut sections = Vec::new();
@@ -34,8 +32,6 @@ fn main() -> io::Result<()> {
         if first_sections.iter().any(|f| second_sections.contains(f)) || second_sections.iter().any(|f| first_sections.contains(f)) {
             second_score += 1;
         }
-        
-        // println!("{} {} {}", first_sections, second_sections, contained);
     }
     println!("{}", score);
     println!("{}", second_score);
