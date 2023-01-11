@@ -10,15 +10,15 @@ enum Command {
     Ls,
     None
 }
-impl Command {
-    fn to_string(&self) -> String {
-        match self {
-            Command::Cd(value) => ["cd", value].join(" ").to_string(),
-            Command::Ls => "ls".to_owned(),
-            Command::None => "".to_owned(),
-        }
-    }
-}
+// impl Command {
+//     fn to_string(&self) -> String {
+//         match self {
+//             Command::Cd(value) => ["cd", value].join(" ").to_string(),
+//             Command::Ls => "ls".to_owned(),
+//             Command::None => "".to_owned(),
+//         }
+//     }
+// }
 
 fn parse_command (line: &str) -> Command {
     if line.contains("cd") {
